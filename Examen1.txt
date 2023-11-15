@@ -1,0 +1,44 @@
+¿Qué es un algoritmo?
+Es una secuencia de pasos para realizar una actividad.
+
+¿Cuál es la diferencia entre un lenguaje de alto nivel, lenguaje ensamblador, y lenguaje maquina?
+Lenguaje maquina es conocido como binario, que se ve en 0 y 1 (lo cual se traduce a pulsos eléctricos en la computadora)
+Lenguaje ensamblador fue creado para no lidiar con el lenguaje maquina y en lugar hacerlo a través de instrucciones básicas y limitadas (MOV, LOAD, ADD, etc.)
+Lenguaje de alto nivel es con el que trabaja el programador (C, Python, Java, etc.), son lenguajes mas legibles que necesitan traducción para ser llevado a lenguaje maquina
+
+¿Qué es un compilador?
+Es un programa que toma un programa en un lenguaje fuente y lo traduce a un lenguaje objetivo. Este programa en lenguaje objetivo lo entiende la computadora.
+
+¿Cuál es la diferencia entre un compilador y un interprete?
+Los compiladores generan un programa objetivo, mientras que un interprete en lugar de generar este programa objetivo, ejecuta linea por linea las operaciones que hay en el programa.
+También un programa objetivo de un compilador es mas rápido que el generado por un interprete porque el compilador hace el proceso de traducción en un solo proceso mientras que el interprete lo hace linea por linea.
+
+¿Qué se hace en la etapa de análisis (front end) del compilador?
+Se analiza la gramatica del código fuente y en caso de encontrar errores, manda una alerta al usuario para que sean corregidas.
+En esta etapa se guarda información sobre el código fuente y se guarda en una estructura que se llama "tabla de símbolos" (que la recibe el Back End a través del IR)
+
+¿Qué se hace en la etapa de síntesis (back end) del compilador?
+Se construye el programa objetivo a partir del código generado por el IR y la tabla de símbolos. En esta etapa se supone que cualquier error ya fue corregido (el código llega limpio)
+
+¿Quién es el responsable de enviar la información del back end al front end?
+La Representación Intermedia (IR). Actua como un canal de datos entre Front End y Backend. También pueden existir varias capas de IR porque el IR se encarga de intentar mejorar el código.
+
+Es la etapa que se encarga de clasificar los diferentes componentes de una instrucción en su correspondiente estructura.
+El scan. Este hace un rapeo de las instrucciones que recibe con su estructura base.
+
+Es el encargado de mapear los registros virtuales con los registros físicos. También decide que valores son los que se almacenaran en los registros físicos modificando el código para reflejar esas decisiones.
+Asignador de registros. Trata de asignar los registros de una forma eficiente de tal forma que se usen los menos registros posibles porque entre mas accesos a memoria, empeora el rendimiento del programa.
+
+¿Cuál es el objetivo de una interrupción en el procesador?
+Mejorar la eficiencia en el procesamiento al no desperdiciar tiempo esperando que otros procesos en otros dispositivos externos terminen su propio procesamiento. En cambio, si se manda una señal a otros dispositivo (para iniciar su propio proceso), el proceso principal puede continuar con su ciclo sin quedarse en pausa esperando la respuesta del dispositivo. Cuando el dispositivo haya terminado, el proceso principal recibe la señal y continua con su tarea.
+
+¿Qué hace el compilador en la etapa de planificación de instrucciones?
+Reordena las instrucciones para optimizar y hacer los más ágil posible la compilación del código.
+
+¿Cuál es la diferencia entre concurrencia y paralelismo?
+Concurrencia es ejecutar distintas tareas de una forma intercalada en el tiempo (que pueda que a veces se ejecuten al mismo tiempo; paralelismo)
+Paralelismo es la ejecución de distintas tareas al mismo tiempo
+
+Ejemplo del profe:
+Concurrencia: Hablar y comer
+Paralelismo: Bailar y cantar

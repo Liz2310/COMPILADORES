@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+int main()
+{
+    // Ejercicio 1
+    int bit;
+    int cuenta = 0;
+    char respuesta[3];
+
+    while (true){
+        printf("Entrada-----> ");
+        scanf("%d", &bit);
+        
+        if(bit == 1 && cuenta >= 2){
+            cuenta += 1;
+            printf("LUZ VERDE\n");
+            printf("Desea salir? (yes/no): ");
+            scanf("%s", &respuesta);
+            if (strcmp(respuesta, "yes") == 0){
+                break;
+            }
+        }else if (bit == 1 && cuenta < 3){
+            cuenta += 1;
+            printf("LUZ ROJA\n");
+            printf("Desea salir? (yes/no): ");
+            scanf("%s", &respuesta);
+            
+            if (strcmp(respuesta, "yes") == 0){
+                break;
+            }
+        }else if (bit == 0){
+            cuenta = 0;
+            printf("LUZ ROJA\n");
+            printf("Desea salir? (yes/no): ");
+            scanf("%s", &respuesta);
+            if (strcmp(respuesta, "yes") == 0){
+                break;
+            }
+        }
+        
+
+    }
+    
+    return 0;
+} 
